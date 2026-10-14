@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://carlaw-guest-house-warri.tuned-bloom-7490.chatgpt.site/sitemap.xml

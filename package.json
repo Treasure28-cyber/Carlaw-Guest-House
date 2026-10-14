@@ -1,0 +1,19 @@
+{
+  "name": "carlawguesthouse",
+  "version": "1.0.0",
+  "description": "Six-page static website for Carlaw Guest House",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/serve.mjs",
+    "check": "node scripts/check.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@napi-rs/canvas": "^1.0.11",
+    "pdfjs-dist": "^6.4.299"
+  },
+  "private": true
+}
