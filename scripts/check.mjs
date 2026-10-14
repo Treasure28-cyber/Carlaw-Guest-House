@@ -15,4 +15,14 @@ for(const page of pages){
  assert.ok(!/\[RATE\]|\[EMAIL\]|PASTE REAL|FORM ENDPOINT/.test(html),'No unfinished placeholders');
 }
 const photos=JSON.parse(fs.readFileSync('dist/assets/photos.json'));assert.equal(photos.length,9);for(const [file] of photos)assert.ok(fs.existsSync('dist/assets/'+file));
+const restored=JSON.parse(fs.readFileSync('dist/assets/image-manifest.json'));
+assert.equal(Object.keys(restored).length,5);
+for(const [original,entry] of Object.entries(restored)){
+ assert.ok(fs.existsSync('dist/assets/'+original));
+ for(const file of [entry.src,entry.small])assert.ok(fs.existsSync('dist/assets/'+file),'Missing responsive image '+file);
+ assert.ok(entry.width>=1400&&entry.height>900,'Restored image should be high resolution');
+}
+const home=fs.readFileSync('dist/index.html','utf8');
+assert.equal((home.match(/class="room-photo-caption"/g)||[]).length,2);
+assert.ok(home.includes('srcset="/assets/room-blue-enhanced-768.webp'));
 console.log(`Passed: six pages, ${links} local links/assets, structured data, nine photographs, and no unfinished placeholders.`);

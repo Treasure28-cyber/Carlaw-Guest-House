@@ -1,0 +1,32 @@
+{
+  "room-blue.webp": {
+    "src": "room-blue-enhanced-1533.webp",
+    "small": "room-blue-enhanced-768.webp",
+    "width": 1533,
+    "height": 1026
+  },
+  "room-ivory.webp": {
+    "src": "room-ivory-enhanced-1537.webp",
+    "small": "room-ivory-enhanced-768.webp",
+    "width": 1537,
+    "height": 1023
+  },
+  "room-plum.webp": {
+    "src": "room-plum-enhanced-1573.webp",
+    "small": "room-plum-enhanced-768.webp",
+    "width": 1573,
+    "height": 1000
+  },
+  "room-sunset.webp": {
+    "src": "room-sunset-enhanced-1531.webp",
+    "small": "room-sunset-enhanced-768.webp",
+    "width": 1531,
+    "height": 1027
+  },
+  "exterior.jpg": {
+    "src": "exterior-enhanced-1484.webp",
+    "small": "exterior-enhanced-768.webp",
+    "width": 1484,
+    "height": 1060
+  }
+}
