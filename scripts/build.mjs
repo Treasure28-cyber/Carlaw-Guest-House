@@ -1,6 +1,12 @@
 import fs from 'node:fs';
 const root = 'dist';
-const origin = 'https://carlaw-guest-house-warri.tuned-bloom-7490.chatgpt.site';
+const deploymentHost = process.env.VERCEL_PROJECT_PRODUCTION_URL || process.env.VERCEL_URL;
+const configuredOrigin = process.env.SITE_URL || (deploymentHost ? `https://${deploymentHost}` : 'https://carlaw-guest-house-warri.tuned-bloom-7490.chatgpt.site');
+const parsedOrigin = new URL(configuredOrigin);
+if (!['https:', 'http:'].includes(parsedOrigin.protocol) || parsedOrigin.username || parsedOrigin.password || parsedOrigin.search || parsedOrigin.hash || parsedOrigin.pathname !== '/') {
+  throw new Error('SITE_URL must be an HTTP(S) site origin, such as https://carlaw.vercel.app');
+}
+const origin = parsedOrigin.origin;
 const wa = (message = "Hello, I'd like to book a room at Carlaw Guest House") => `https://wa.me/2348067141416?text=${encodeURIComponent(message)}`;
 const book = (label = 'Book your stay', message) => `<a class="button" href="${wa(message)}" target="_blank" rel="noopener">${label}<span aria-hidden="true">↗</span></a>`;
 const image = (src, alt, cls = '', eager = false) => `<img class="${cls}" src="/assets/${src}" alt="${alt}" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async">`;

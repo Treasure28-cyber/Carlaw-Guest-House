@@ -1,0 +1,10 @@
+.git
+.openai
+.npm-cache
+node_modules
+tmp
+output
+carlaw-site
+*.tar.gz
+*.zip
+.env*
