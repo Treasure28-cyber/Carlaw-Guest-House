@@ -3,7 +3,7 @@ const nav=document.querySelector('#main-nav');
 function closeMenu(){nav.classList.remove('open');menuButton.setAttribute('aria-expanded','false');menuButton.setAttribute('aria-label','Open navigation');document.body.classList.remove('locked');}
 menuButton.addEventListener('click',()=>{const open=menuButton.getAttribute('aria-expanded')!=='true';nav.classList.toggle('open',open);menuButton.setAttribute('aria-expanded',String(open));menuButton.setAttribute('aria-label',open?'Close navigation':'Open navigation');document.body.classList.toggle('locked',open);if(open)nav.querySelector('a').focus();});
 nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
-window.matchMedia('(min-width: 851px)').addEventListener('change',e=>{if(e.matches)closeMenu();});
+window.matchMedia('(min-width: 1101px)').addEventListener('change',e=>{if(e.matches)closeMenu();});
 document.addEventListener('keydown',e=>{if(!nav.classList.contains('open'))return;if(e.key==='Escape'){closeMenu();menuButton.focus();}if(e.key==='Tab'){const focusable=[...nav.querySelectorAll('a'),menuButton];const first=focusable[0],last=focusable.at(-1);if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}}});
 const today=new Date();const localToday=`${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-${String(today.getDate()).padStart(2,'0')}`;
 document.querySelectorAll('input[type=date]').forEach(input=>input.min=localToday);
