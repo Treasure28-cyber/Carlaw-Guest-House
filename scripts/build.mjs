@@ -8,13 +8,13 @@ if (!['https:', 'http:'].includes(parsedOrigin.protocol) || parsedOrigin.usernam
 }
 const origin = parsedOrigin.origin;
 const wa = (message = "Hello, I'd like to book a room at Carlaw Guest House") => `https://wa.me/2348067141416?text=${encodeURIComponent(message)}`;
-const book = (label = 'Book your stay', message) => `<a class="button" href="${wa(message)}" target="_blank" rel="noopener">${label}<span aria-hidden="true">↗</span></a>`;
+const book = (label = 'Book your stay', message) => `<a class="button" href="${wa(message)}" target="_blank" rel="noopener">${label}<span aria-hidden="true">→</span></a>`;
 const restoredImages = JSON.parse(fs.readFileSync('dist/assets/image-manifest.json','utf8'));
 const image = (src, alt, cls = '', eager = false) => {
  const restored=restoredImages[src];
  return `<img class="${cls}" src="/assets/${restored?.src||src}" ${restored?`srcset="/assets/${restored.small} 768w, /assets/${restored.src} ${restored.width}w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 80vw, 50vw" width="${restored.width}" height="${restored.height}"`:''} alt="${restored?'Restored property photograph: ':''}${alt}" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async">`;
 };
-const link = (href, label) => `<a class="text-link" href="${href}">${label} <span aria-hidden="true">↗</span></a>`;
+const link = (href, label) => `<a class="text-link" href="${href}">${label} <span aria-hidden="true">→</span></a>`;
 const eyebrow = text => `<p class="eyebrow">${text}</p>`;
 const rooms = [
   { name: 'Standard Room', image: 'room-blue.webp', desc: 'For a short visit or business trip, with air conditioning, WiFi, and an en-suite bathroom.', note: 'For short stays & business trips' },
