@@ -23,6 +23,8 @@ for(const [original,entry] of Object.entries(restored)){
  assert.ok(entry.width>=1400&&entry.height>900,'Restored image should be high resolution');
 }
 const home=fs.readFileSync('dist/index.html','utf8');
-assert.equal((home.match(/class="room-photo-caption"/g)||[]).length,2);
+assert.equal((home.match(/data-room-slide="/g)||[]).length,2,'Both rooms must be selectable');
+assert.equal((home.match(/class="signature-slide"/g)||[]).length,2,'Both room panels must be present');
+assert.ok(home.includes('/assets/editorial.css'),'Editorial styles must be loaded');
 assert.ok(home.includes('srcset="/assets/room-blue-enhanced-768.webp'));
 console.log(`Passed: six pages, ${links} local links/assets, structured data, nine photographs, and no unfinished placeholders.`);
