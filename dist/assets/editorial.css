@@ -87,3 +87,20 @@ body[data-page=about] .page-band-photo img{object-position:center 45%}
  .page-band.photo-band{min-height:500px;padding-top:65px;padding-bottom:60px}
 }
 @media(max-width:360px){.hero h1{font-size:46px}.hero.editorial-hero{min-height:640px}.experience-tile{height:370px}.signature-caption{padding:23px}.signature-caption h3{font-size:32px}}
+
+/* Guest stories supplied by Carlaw, presented as a scrollable editorial collection. */
+.guest-reviews{background:#edf0e7;overflow:hidden}
+.review-track{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:2px;padding:4px 2px 24px;scrollbar-width:thin;scrollbar-color:#8b9b82 transparent;overscroll-behavior-x:contain}
+.review-card{flex:0 0 calc((100% - 24px)/2);min-width:0;scroll-snap-align:start;background:#fffefa;border:1px solid #dce2d4;border-radius:20px;padding:32px;display:flex;flex-direction:column}
+.review-card-top{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:28px}
+.review-platform{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#5d725c}
+.review-rating{font-family:var(--serif);font-size:38px;color:var(--green);line-height:1}
+.review-rating small{font-family:var(--sans);font-size:13px;color:#66705f;margin-left:4px}
+.review-card blockquote{margin:0 0 34px}
+.review-card blockquote p{font-family:var(--serif);font-size:25px;line-height:1.5;color:#344536}
+.review-author{display:flex;align-items:center;gap:14px;margin-top:auto}
+.review-avatar{height:42px;width:42px;flex-shrink:0;border-radius:50%;background:#e8eddf;color:var(--green);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:23px}
+.review-author h3{font-family:var(--sans);font-size:14px;font-weight:600;letter-spacing:0;line-height:1.5;overflow-wrap:anywhere}
+.review-author div>span{font-size:11px;color:#66705f}
+.review-scroll-hint{text-align:center;font-size:12px;color:#5d725c;margin-top:16px}
+@media(max-width:600px){.review-track{gap:16px;margin-inline:-20px;padding-inline:20px;scroll-padding-inline:20px}.review-card{flex-basis:90%;padding:27px 24px;border-radius:18px}.review-card blockquote p{font-size:24px}.review-card-top{margin-bottom:25px}.review-author h3{font-size:13px}.review-scroll-hint{font-size:11px}.guest-reviews .center-heading h2{font-size:43px}}
