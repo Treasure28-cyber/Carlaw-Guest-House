@@ -46,5 +46,6 @@ const reviewStep=direction=>{if(!reviewTrack)return;const card=reviewTrack.query
 document.querySelector('[data-review-prev]')?.addEventListener('click',()=>reviewStep(-1));
 document.querySelector('[data-review-next]')?.addEventListener('click',()=>reviewStep(1));
 const pageHeader=document.querySelector('header');
-function updateHeader(){pageHeader.classList.toggle('is-scrolled',window.scrollY>40);}
+const backToTop=document.querySelector('.back-to-top');
+function updateHeader(){const scrolled=window.scrollY>40;pageHeader.classList.toggle('is-scrolled',scrolled);backToTop?.classList.toggle('is-visible',window.scrollY>320);}
 window.addEventListener('scroll',updateHeader,{passive:true});updateHeader();
