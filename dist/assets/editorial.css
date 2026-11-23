@@ -104,3 +104,67 @@ body[data-page=about] .page-band-photo img{object-position:center 45%}
 .review-author div>span{font-size:11px;color:#66705f}
 .review-scroll-hint{text-align:center;font-size:12px;color:#5d725c;margin-top:16px}
 @media(max-width:600px){.review-track{gap:16px;margin-inline:-20px;padding-inline:20px;scroll-padding-inline:20px}.review-card{flex-basis:90%;padding:27px 24px;border-radius:18px}.review-card blockquote p{font-size:24px}.review-card-top{margin-bottom:25px}.review-author h3{font-size:13px}.review-scroll-hint{font-size:11px}.guest-reviews .center-heading h2{font-size:43px}}
+
+/* Carlaw signage brand: red, white and charcoal. */
+:root{--paper:#fbfaf8;--cream:#f1efed;--ink:#292624;--green:#292624;--gold:#d9272e;--muted:#5d5856;--line:#ded9d7}
+.button,.header-book .button,.hero .button{background:#d9272e;border-color:#d9272e;color:#fff}
+.button:hover,.hero .button:hover{background:#b91f26;border-color:#b91f26;color:#fff}
+.eyebrow,.text-link:hover,.amenity-grid svg{color:#c8242b}
+nav>a[aria-current]:after{background:#d9272e}
+.hero{background:#242120}.hero:after{background:linear-gradient(90deg,#171615e8,#171615a8 60%,#17161538)}.hero h1 em{color:#ffd9d8}
+.signature,.signature-caption{background-color:#242120}.cta{background:#242120;color:#fff}.cta .eyebrow,.cta p,.cta-phone{color:#e6dedd}
+footer{background:#181716;color:#e9e5e3}.footer-label{color:#ffb2b5}.footer-main .monogram{border-color:#8f8583;color:#fff}
+.page-band{background:#eee9e7}.guest-reviews{background:#f1eeec}.review-card{background:#fff;border-color:#ded8d5}.review-platform,.review-scroll-hint{color:#a92329}.review-rating{color:#c8242b}.review-card blockquote p{color:#393330}.review-avatar{background:#f7e8e8;color:#b51f27}
+.logo-mark{overflow:hidden;border:0!important;background:#fff;width:48px;height:48px}.logo-mark img{width:100%;height:100%;object-fit:cover;object-position:4% 19%;transform:scale(2.25)}
+.hero h1{font-size:clamp(47px,6vw,76px)}
+.booking-hint{display:block;font-size:12px;line-height:1.5;max-width:195px;color:#5d5856}
+.amenity-grid{grid-template-columns:repeat(3,1fr)}.amenity-grid article p{display:none}.amenity-grid h3{margin:15px 0 0;font-family:var(--sans);font-size:17px;font-weight:600;letter-spacing:0}.amenity-grid article{border-top:1px solid #d8d0ce;padding-top:22px}.amenity-grid svg{margin-bottom:3px}
+@media(max-width:600px){.hero h1{font-size:clamp(40px,10vw,56px)}.hero.editorial-hero{min-height:650px;height:auto}.hero-inner{padding-top:65px;padding-bottom:145px}.hero-actions{flex-direction:row;flex-wrap:wrap}.hero-actions .button{width:auto}.booking-intro strong{display:block;font-size:22px}.booking-hint{max-width:100%;font-size:11px}.amenity-grid{grid-template-columns:repeat(2,1fr)}.logo-mark{width:40px;height:42px}.room-card-info{padding-top:16px}}
+
+/* Keep trust items and labels scannable on the home page. */
+.amenity-scan{padding-block:75px}.amenity-scan .center-heading{margin-bottom:32px}.amenity-scan .amenity-grid{gap:25px 32px}.amenity-scan .amenity-grid article{display:flex;align-items:center;gap:14px;padding:18px 0}.amenity-scan .amenity-grid h3{margin:0;font-size:15px}.signature-heading h2{font-size:42px}.signature-caption h3{font-size:32px}
+@media(max-width:600px){.amenity-scan{padding-block:48px}.amenity-scan .amenity-grid{gap:12px 20px}.amenity-scan .amenity-grid article{gap:9px}.amenity-scan .amenity-grid h3{font-size:13px}.signature-heading h2{font-size:34px}}
+
+/* Refined hero, brand menu and room details from client review. */
+@media(min-width:1101px){.hero.editorial-hero{height:min(780px,88vh);min-height:650px;max-height:820px}.hero-inner{padding-top:110px;padding-bottom:95px}.hero h1{font-size:clamp(54px,5.4vw,78px);max-width:900px}.hero p:not(.eyebrow){max-width:560px}.hero-actions{margin-top:22px}.hero .eyebrow{margin-bottom:15px}.signature-heading{display:block;top:40px}.signature-heading h2{font-size:38px;max-width:460px}.signature-heading p{display:none}.signature-caption{width:330px;padding:23px;bottom:34px}.signature-caption p{font-size:13px}.signature{height:650px}}
+.room-photo-caption{display:none!important}.room-booking-details{display:none!important}
+.room-row-copy .rate{display:none}
+.menu-open nav.open{background:#fff;color:#262321;border-left:5px solid #d9272e}.menu-open nav.open .menu-brand{color:#d9272e}.menu-open nav.open .menu-brand small,.menu-open nav.open .menu-stay p,.menu-open nav.open .menu-phone{color:#5e5855}.menu-open nav.open>a{color:#282523;border-bottom:1px solid #e8e2df;width:100%;font-size:34px}.menu-open nav.open>a[aria-current]{color:#d9272e}.menu-open .menu-index{color:#a09a97}.menu-open nav.open>.mobile-nav-book{background:#d9272e;border-color:#d9272e;color:#fff}.menu-open .menu-toggle{background:#d9272e!important;color:#fff!important;border-color:#d9272e!important}.menu-toggle{background:#d9272e!important;color:#fff}.mobile-book{background:#d9272e!important}
+.availability{align-items:center;grid-template-columns:1fr 1fr 1fr .7fr 1.2fr}.booking-intro{align-self:center}.availability>.button{align-self:center;justify-content:center}.booking-intro strong{display:block}.booking-hint{max-width:190px}
+.review-controls{display:flex;justify-content:center;gap:12px;margin-top:20px}.review-controls button{border:1px solid #c8242b;background:#fff;color:#c8242b;border-radius:50%;height:44px;width:44px;font-size:22px;line-height:1}.review-controls button:hover{background:#c8242b;color:#fff}
+@media(max-width:600px){.hero.editorial-hero{height:calc(100svh - 94px);min-height:0;max-height:none}.hero-inner{padding-top:32px;padding-bottom:110px;justify-content:center}.hero .eyebrow{margin-bottom:13px}.hero h1{font-size:clamp(38px,9.3vw,52px);line-height:1.02}.hero p:not(.eyebrow){font-size:14px;line-height:1.55;margin-top:16px}.hero-actions{margin-top:17px;gap:10px}.hero .button{padding:12px 17px;min-height:46px;font-size:13px}.hero .text-link{font-size:12px}.hero-foot{bottom:15px}.booking-section{padding-top:16px}.availability{grid-template-columns:1fr 1fr}.availability .booking-intro{grid-column:1/-1}.availability .button{grid-column:1/-1;justify-content:center}.booking-intro strong{font-size:22px}.booking-hint{max-width:none}.signature{height:560px}.signature-heading{top:25px}.signature-heading h2{font-size:30px;max-width:230px}.signature-caption{left:18px;right:68px;bottom:20px;padding:18px;width:auto}.signature-caption h3{font-size:25px;margin-bottom:6px}.signature-caption p{font-size:12px;line-height:1.45;margin-top:6px}.signature-caption .text-link{font-size:12px;margin-top:5px}.signature-controls{right:15px;bottom:25px;gap:8px}.signature-controls button{width:36px;height:36px}.guest-reviews{padding-block:48px}.guest-reviews .center-heading{margin-bottom:20px}.guest-reviews .center-heading h2{font-size:34px;margin-bottom:8px}.guest-reviews .center-heading p:not(.eyebrow){font-size:13px}.review-track{gap:12px;margin-inline:0;padding:0 0 8px;scroll-snap-type:x mandatory}.review-card{flex:0 0 100%;min-height:300px;height:300px;padding:20px 20px 17px;border-radius:14px}.review-card blockquote{margin-bottom:13px;overflow:auto}.review-card blockquote p{font-size:17px;line-height:1.42}.review-card-top{margin-bottom:12px}.review-rating{font-size:29px}.review-author{gap:10px}.review-avatar{height:34px;width:34px;font-size:19px}.review-author h3{font-size:12px}.review-controls{margin-top:12px}.review-controls button{height:38px;width:38px}.room-row-copy .checklist{margin-block:18px}.room-row-copy .small-note{margin-top:0}.menu-open nav.open{padding:74px 8vw 30px}.menu-open nav.open>a{font-size:28px;padding:8px 0}.menu-open nav.open>.mobile-nav-book{margin-top:12px}.menu-open nav.open .menu-stay p{margin-bottom:4px}.menu-open .menu-toggle{top:27px;right:27px}}
+
+@media(min-width:601px){body[data-page="home"] #welcome .welcome-image{display:none}body[data-page="home"] #welcome.welcome{grid-template-columns:1fr}}
+
+/* Brighter photo-led hero treatment, with a readable soft panel behind copy. */
+.hero.editorial-hero:after{background:linear-gradient(90deg,rgba(25,24,23,.15),rgba(25,24,23,.05) 55%,rgba(25,24,23,.08))}
+.hero.editorial-hero .hero-inner{color:#fff;text-shadow:0 2px 16px rgba(0,0,0,.28)}
+.hero.editorial-hero .hero-inner>.eyebrow,.hero.editorial-hero .hero-inner>h1,.hero.editorial-hero .hero-inner>p:not(.eyebrow),.hero.editorial-hero .hero-actions{position:relative;z-index:2}
+.hero.editorial-hero .hero-inner:before{content:'';position:absolute;z-index:1;left:50%;top:50%;transform:translate(-50%,-50%);width:min(780px,90vw);height:calc(100% - 115px);border:1px solid rgba(255,255,255,.24);border-radius:22px;background:linear-gradient(135deg,rgba(28,27,26,.56),rgba(28,27,26,.28));backdrop-filter:blur(3px);box-shadow:0 18px 55px rgba(15,12,10,.12)}
+.hero.editorial-hero .hero-foot{color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.photo-band:after{background:linear-gradient(90deg,rgba(25,24,23,.40),rgba(25,24,23,.18) 58%,rgba(25,24,23,.08)),linear-gradient(0deg,rgba(25,24,23,.26),transparent 70%)}
+.photo-band .page-band-copy{max-width:760px;padding:27px 32px;border:1px solid rgba(255,255,255,.25);border-radius:18px;background:linear-gradient(135deg,rgba(35,32,30,.54),rgba(35,32,30,.30));backdrop-filter:blur(3px);box-shadow:0 14px 45px rgba(15,12,10,.12)}
+.photo-band .page-band-copy .eyebrow{color:#ffe2b8}.photo-band .page-band-copy h1,.photo-band .page-band-copy p:not(.eyebrow){text-shadow:0 2px 12px rgba(0,0,0,.35)}
+@media(max-width:600px){.hero.editorial-hero .hero-inner:before{width:calc(100% - 24px);height:calc(100% - 98px);border-radius:18px;background:linear-gradient(135deg,rgba(28,27,26,.54),rgba(28,27,26,.30))}.photo-band:after{background:linear-gradient(90deg,rgba(25,24,23,.32),rgba(25,24,23,.12)),linear-gradient(0deg,rgba(25,24,23,.24),transparent 72%)}.photo-band .page-band-copy{padding:22px 20px;border-radius:16px}}
+
+/* Testimonials use arrow controls instead of a visible scrollbar. */
+.review-track{scrollbar-width:none!important;-ms-overflow-style:none!important}
+.review-track::-webkit-scrollbar{display:none!important;width:0!important;height:0!important}
+.review-controls button{font-size:0!important;position:relative}
+.review-controls button:after{content:'';display:block;width:10px;height:10px;border-top:2px solid currentColor;border-right:2px solid currentColor;position:absolute;left:50%;top:50%;transform:translate(-35%,-50%) rotate(45deg)}
+.review-controls button[data-review-prev]:after{transform:translate(-20%,-50%) rotate(-135deg)}
+.review-controls button[data-review-next]:after{transform:translate(-80%,-50%) rotate(45deg)}
+
+.logo-mark{background:transparent!important;width:48px;height:48px;border-radius:50%;flex:0 0 48px}.logo-mark img{width:100%;height:100%;object-fit:contain;object-position:center;transform:none!important}.footer-main .logo-mark{background:#fff!important}@media(max-width:600px){.logo-mark{width:40px;height:40px;flex-basis:40px}}
+
+/* Room selector heading and controls refinements. */
+@media(min-width:1101px){.signature-heading h2{font-size:clamp(48px,4.3vw,64px);line-height:.98;max-width:560px}.signature-heading{top:42px}.signature-controls{right:36px;top:50%;bottom:auto;transform:translateY(-50%);gap:12px}.signature-controls button{width:48px;height:48px}}
+@media(max-width:600px){.signature-heading{top:24px;left:0;right:0;padding:14px 18px;background:linear-gradient(90deg,rgba(24,23,22,.76),rgba(24,23,22,.42));border-block:1px solid rgba(255,255,255,.14)}.signature-heading .eyebrow{margin-bottom:8px;font-size:9px}.signature-heading h2{font-size:clamp(28px,8vw,34px);line-height:1;max-width:250px}.signature-caption{right:70px;bottom:22px}.signature-controls{left:auto;right:14px;top:50%;bottom:auto;transform:translateY(-50%);flex-direction:column;gap:10px}.signature-controls button{width:40px;height:40px}}
+
+/* Hero panel rules: homepage stays clear; inner banners retain glass only on mobile. */
+body[data-page="home"] .hero.editorial-hero .hero-inner:before{display:none!important}
+body[data-page="home"] .hero.editorial-hero:after{background:linear-gradient(90deg,rgba(24,23,22,.30),rgba(24,23,22,.14) 58%,rgba(24,23,22,.06))}
+@media(min-width:601px){.photo-band .page-band-copy{max-width:960px;padding:0;border:0;border-radius:0;background:transparent;backdrop-filter:none;box-shadow:none}.photo-band .page-band-copy .eyebrow{font-size:13px;margin-bottom:24px}.photo-band .page-band-copy h1{font-size:clamp(68px,8vw,112px);font-weight:600;line-height:.98;max-width:1000px}.photo-band .page-band-copy p:not(.eyebrow){font-size:20px;max-width:700px;margin-top:28px}}
+@media(max-width:600px){body[data-page="home"] .hero.editorial-hero .hero-inner:before{display:none!important}.photo-band .page-band-copy{background:linear-gradient(135deg,rgba(35,32,30,.54),rgba(35,32,30,.30));border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(3px);box-shadow:0 14px 45px rgba(15,12,10,.12)}}
+
+@media(max-width:600px){body[data-page="home"] .hero.editorial-hero .hero-inner:before{display:block!important;width:calc(100% - 24px);height:calc(100% - 98px);border:1px solid rgba(255,255,255,.24);border-radius:18px;background:linear-gradient(135deg,rgba(28,27,26,.54),rgba(28,27,26,.30));backdrop-filter:blur(3px);box-shadow:0 18px 55px rgba(15,12,10,.12)}}

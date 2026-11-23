@@ -3,18 +3,19 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 const pages=['','rooms','amenities','gallery','about','contact'];
 let links=0;
+if(!fs.existsSync('dist/favicon.ico'))throw new Error('Root favicon.ico missing');
 for(const page of pages){
  const html=fs.readFileSync(path.join('dist',page,'index.html'),'utf8');
- assert.match(html,/<main id="main">/);assert.match(html,/<title>[^<]+<\/title>/);assert.match(html,/name="description"/);
+ assert.match(html,/<main id="main">/);assert.match(html,/<title>[^<]+<\/title>/);assert.match(html,/name="description"/);assert.match(html,/<meta property="og:locale" content="en_NG">/);assert.match(html,/<meta name="twitter:card" content="summary_large_image">/);
  assert.equal((html.match(/<h1>/g)||[]).length,1,`${page}: one main heading`);
  JSON.parse(html.match(/<script type="application\/ld\+json">([^<]+)/)[1]);
  for(const match of html.matchAll(/(?:href|src)="(\/[^"#]*)/g)){
- const target=match[1].split('#')[0];let local=path.join('dist',target);if(fs.existsSync(local)&&fs.statSync(local).isDirectory())local=path.join(local,'index.html');
+ const target=match[1].split(/[?#]/)[0];let local=path.join('dist',target);if(fs.existsSync(local)&&fs.statSync(local).isDirectory())local=path.join(local,'index.html');
  assert.ok(fs.existsSync(local),`${page}: missing ${target}`);links++;
  }
  assert.ok(!/\[RATE\]|\[EMAIL\]|PASTE REAL|FORM ENDPOINT/.test(html),'No unfinished placeholders');
 }
-const photos=JSON.parse(fs.readFileSync('dist/assets/photos.json'));assert.equal(photos.length,9);for(const [file] of photos)assert.ok(fs.existsSync('dist/assets/'+file));
+const photos=JSON.parse(fs.readFileSync('dist/assets/photos.json'));assert.equal(photos.length,13);for(const [file] of photos)assert.ok(fs.existsSync('dist/assets/'+file));
 const restored=JSON.parse(fs.readFileSync('dist/assets/image-manifest.json'));
 assert.equal(Object.keys(restored).length,5);
 for(const [original,entry] of Object.entries(restored)){
@@ -22,9 +23,9 @@ for(const [original,entry] of Object.entries(restored)){
  for(const file of [entry.src,entry.small])assert.ok(fs.existsSync('dist/assets/'+file),'Missing responsive image '+file);
  assert.ok(entry.width>=1400&&entry.height>900,'Restored image should be high resolution');
 }
-const home=fs.readFileSync('dist/index.html','utf8');
+const home=fs.readFileSync('dist/index.html','utf8');assert.match(home,/<title>Carlaw Guest House \| Hotels in Warri, Delta State<\/title>/);assert.match(home,/Hotels in Warri, Delta State/);
 assert.equal((home.match(/data-room-slide="/g)||[]).length,2,'Both rooms must be selectable');
 assert.equal((home.match(/class="signature-slide"/g)||[]).length,2,'Both room panels must be present');
 assert.ok(home.includes('/assets/editorial.css'),'Editorial styles must be loaded');
-assert.ok(home.includes('srcset="/assets/room-blue-enhanced-768.webp'));
-console.log(`Passed: six pages, ${links} local links/assets, structured data, nine photographs, and no unfinished placeholders.`);
+assert.ok(home.includes('client-room-sunset-sharp.webp'));
+console.log(`Passed: six pages, ${links} local links/assets, structured data, thirteen photographs, and no unfinished placeholders.`);
